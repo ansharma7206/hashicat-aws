@@ -1,6 +1,8 @@
 module "s3_bucket" {
-  source = "ansharma7206/terraform-aws-modules/s3-bucket/aws"
-  bucket_prefix = ${var.prefix}
+  source  = "app.terraform.io/test_organization_1122/s3-bucket/aws"
+  version = "2.8.0"
+  
+  bucket_prefix = var.prefix
   bucket = "my-s3-test-bucket"
   acl    = "private"
 
